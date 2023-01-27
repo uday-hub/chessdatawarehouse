@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="bg-dark shadow navbar-dark">
       <nav className="navbar navbar-expand-lg navbar-dark py-3">
         <div className="container">
-          <a href="#" className="navbar-brand">
+          <a href="/#" className="navbar-brand">
             <img
               className="img-fluid"
               height="50"
@@ -31,7 +31,9 @@ const Navbar = () => {
             <ul className="navbar-nav ms-auto">
               <Link exact to="/">
                 <li className="nav-item">
-                  <a className="nav-link">Home</a>
+                  <a href="#home" className="nav-link">
+                    Home
+                  </a>
                 </li>
               </Link>
 
