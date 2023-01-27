@@ -4,7 +4,7 @@ import img from "../Assets/horse.png";
 
 const Navbar = () => {
   return (
-    <div className="bg-dark shadow navbar-dark">
+    <div className="shadow navbar-dark" style={{ background: "#272522" }}>
       <nav className="navbar navbar-expand-lg navbar-dark py-3">
         <div className="container">
           <a href="/#" className="navbar-brand">
@@ -28,7 +28,7 @@ const Navbar = () => {
           </button>
 
           <div className="collapse navbar-collapse" id="navmenu">
-            <ul className="navbar-nav ms-auto">
+            <ul className="navbar-nav ms-auto ">
               <Link exact to="/">
                 <li className="nav-item">
                   <a href="#home" className="nav-link">
@@ -48,6 +48,13 @@ const Navbar = () => {
                 <li className="nav-item">
                   <a href="#puzzle" className="nav-link">
                     Stremers
+                  </a>
+                </li>
+              </Link>
+              <Link exact to="/tournament">
+                <li className="nav-item">
+                  <a href="#puzzle" className="nav-link">
+                    Tournament
                   </a>
                 </li>
               </Link>

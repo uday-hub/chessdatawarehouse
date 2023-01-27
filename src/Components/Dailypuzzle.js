@@ -25,27 +25,36 @@ const Dailypuzzle = () => {
         .slice(0, 1)
         .map(() => {
           return (
-            <section class="p-5">
-              <div class="container">
-                <div class="row g-4">
-                  <div class="col-md">
-                    <h2 class="text-center mb-4">Daily Puzzle</h2>
-                    <ul class="list-group list-group-flush lead">
-                      <li class="list-group-item">
-                        <span class="fw-bold"> Title: </span>
-                        {myData.title}
+            <section className="py-5 my-5 my-sm-0">
+              <div className="container">
+                <div className="row g-4">
+                  <div className="col-md" style={{ margin: "auto" }}>
+                    <h2 className="text-center mb-4 text-white">
+                      Daily Puzzle
+                    </h2>
+                    <ul className="list-group border lead text-center my-5">
+                      <li className="list-group-item">
+                        <p className="fs-4">
+                          Title:
+                          <span className="fw-bold"> {myData.title} </span>
+                        </p>
                       </li>
-                      <li class="list-group-item">
+                      <li className="list-group-item">
                         <a href={myData.url}>
-                          <button class="fw-bold"> Start Playing</button>
+                          <button
+                            className="btn btn-lg text-black-50 fw-bolder shadow"
+                            style={{ background: "#7FA650" }}
+                          >
+                            Start Playing
+                          </button>
                         </a>
                       </li>
                     </ul>
                   </div>
-                  <div class="col-md">
+                  <div className="col-md">
                     <img
                       src={myData.image}
-                      class="img-fluid d-none d-md-block"
+                      className="img-fluid d-none d-md-block rounded shadow"
                       alt="img"
                     />
                   </div>

@@ -22,7 +22,7 @@ const Leaderboard = () => {
   return (
     <>
       <div className="leaderboard container">
-        <div className="d-flex justify-content-between mt-5">
+        <div className="d-flex justify-content-between mt-5 text-white">
           <h2>Leaderboards</h2>
           <Link exact to="/">
             <div className="btn btn-secondary h1">Back</div>
@@ -31,7 +31,7 @@ const Leaderboard = () => {
 
         <table className="table">
           <thead>
-            <tr>
+            <tr className="text-white">
               <th scope="">Player</th>
               <th scope="">Rank</th>
               <th scope="">Score</th>
@@ -44,13 +44,13 @@ const Leaderboard = () => {
             // setIsLoading(true);
             return (
               <>
-                <tbody>
-                  <tr>
-                    <td>
+                <tbody className="">
+                  <tr className="">
+                    <td className="">
                       <div class="d-flex align-items-center">
                         <img
                           src={eachData.avatar}
-                          class="circle-img circle-img--small mr-2"
+                          class="circle-img circle-img--small  mx-2"
                           alt="User Img"
                         />
                         <div class="user-info__basic">
@@ -65,8 +65,8 @@ const Leaderboard = () => {
                         <small class="text-success">{eachData.title}</small>
                       </div>
                     </td>
-                    <td>{eachData.score}</td>
-                    <td>{eachData.flair_code}</td>
+                    <td className="fw-bold">{eachData.score}</td>
+                    <td className="fw-bold">{eachData.flair_code}</td>
                     <td>
                       <a href={eachData.url}>
                         <button class="btn btn-success btn-sm">

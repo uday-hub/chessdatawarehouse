@@ -19,9 +19,9 @@ const Streamers = () => {
 
   return (
     <>
-      <section class="p-5">
+      <section class="py-2">
         <div class="container">
-          <div class="row text-center d-flex">
+          <div class="row text-center d-flex ">
             {isLoading ? <Loader /> : ""}
             {myData.slice(0, 40).map((val) => {
               const is_live = val.is_live;
@@ -29,25 +29,25 @@ const Streamers = () => {
               console.log(is_live);
               return (
                 <div class="col-md-4 mb-4">
-                  <div class="card bg-dark text-light">
-                    <div class="card-body text-center">
+                  <div class="card bg-dark bg-gradient bg-opacity-50 border-0  rounded-1 text-light ">
+                    <div class="card-body text-center shadow">
                       <div class="h1 mb-3">
                         <img
-                          className="img-fluid rounded-circle w-25 h-25"
+                          className="img-fluid w-50 h-50"
                           src={val.avatar}
                           alt="img"
                         />
                       </div>
                       <h3 class="card-title mb-3">{val.username}</h3>
-                      <p class="card-text">
+                      <p class="card-text text-info">
                         {is_comm ? "Community Streamer" : "Idle"}
                       </p>
-                      <a href={val.url} class="btn btn-primary">
+                      <a href={val.url} class="btn player-btn">
                         Player URL
-                      </a>{" "}
+                      </a>
                       <br />
                       <br />
-                      <p className=" text-success">
+                      <p className="fw-bold text-success">
                         {is_live ? "Live" : "Offline"}
                       </p>
                     </div>

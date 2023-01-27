@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import Dailypuzzle from "./Components/Dailypuzzle";
 import Streamers from "./Components/Streamers";
+import Tournament from "./Components/Tournament";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/dailypuzzle" element={<Dailypuzzle />}></Route>
             <Route exact path="/streamers" element={<Streamers />}></Route>
             <Route exact path="/leaderboard" element={<Leaderboard />}></Route>
+            <Route exact path="/tournament" element={<Tournament />}></Route>
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
           <Footer />
